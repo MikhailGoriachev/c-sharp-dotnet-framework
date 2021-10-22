@@ -13,7 +13,7 @@ namespace StaticClasses
         // любого количества объектов
         public static readonly int A;
         public static int B;
-
+          
         public int MyProperty { get; set; }
 
         public StaticDemo() { 

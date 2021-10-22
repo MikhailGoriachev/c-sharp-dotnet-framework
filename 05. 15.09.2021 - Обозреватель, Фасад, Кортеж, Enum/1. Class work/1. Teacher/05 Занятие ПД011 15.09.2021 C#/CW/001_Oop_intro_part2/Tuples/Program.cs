@@ -53,7 +53,7 @@ namespace Tuples
             // которые определены в рамках метода
             var (name, age) = ("Федор Царан", 23);
             Console.WriteLine($"\nИспользование переменных как значений кортежа: {name}, {age} года\n\n");
-            
+
             Console.WriteLine("\nВозврат кортежа из метода");
             tuple = GetValues();
             Console.WriteLine($"Получено из GetValues(): {tuple}\n\n");
@@ -62,7 +62,6 @@ namespace Tuples
             Console.WriteLine($"\nДо вызова метода : {name}, {age} года\n");
             (name, age) = GetTuple((name, age), 10);
             Console.WriteLine($"\nИзменено в методе: {name}, {age} года\n\n");
-
           
             // еще о применении кортежей
             int x = 5, y = 10;
@@ -84,7 +83,6 @@ namespace Tuples
             Console.WriteLine($"\nПосле сдвига вправо: x = {x, 2}, y = {y, 2}, z = {z, 2}\n\n");
             
         } // Main
-
 
         // возврат набора значений из метода при помощи кортежа
         private static (int, int) GetValues() {
