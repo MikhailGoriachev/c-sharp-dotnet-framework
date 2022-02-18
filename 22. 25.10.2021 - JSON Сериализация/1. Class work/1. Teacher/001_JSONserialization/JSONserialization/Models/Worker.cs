@@ -1,19 +1,34 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
-namespace XMLserialization.Models
+namespace JSONserialization.Models
 {
     [Serializable]
+    [DataContract]
     public class Worker
     {
-        // только public-члены сериализуются
+        [DataMember]
         public string FirstName { get; set; }
+        
+        [DataMember]
         public string LastName { get; set; }
+        
+        [DataMember]
         public int Age { get; set; }
+
+        [DataMember]  
         public Company Company { get; set; }
 
-        // обязателен стандартный конструктор без параметров
+        // стандартный конструктор без параметров
         public Worker() { }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="lastName"></param>
+        /// <param name="firstName"></param>
+        /// <param name="age"></param>
+        /// <param name="company"></param>
         public Worker(string lastName, string firstName, int age, Company company) {
             LastName = lastName;
             FirstName = firstName;

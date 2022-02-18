@@ -4,10 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Home_Work.Models.Task1;                       // подключение моделей 
-
-using static Home_Work.Application.App.Utils;       // подключение утилит
-
 namespace Home_Work.Controllers
 {
     // Класс Обработка по заданию 1

@@ -1,17 +1,22 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
-namespace XMLserialization.Models
+namespace JSONserialization.Models
 {
-    // класс и его члены объявлены как public
-    [Serializable]
+    [Serializable]  // для JSON не используетя
+    [DataContract]  // для JSON
     public class Person
     {
-        // только public-члены сериализуются
+        [DataMember]  // для JSON
         public string FirstName { get; set; }
+        
+        [DataMember]
         public string LastName  { get; set; }
+        
+        [DataMember] // для записи private поля :)
         public int    Age       { get; set; }
 
-        // обязателен стандартный конструктор без параметров
+        // стандартный конструктор без параметров
         public Person() { }
 
         public Person(string lastName, string firstName, int age) {

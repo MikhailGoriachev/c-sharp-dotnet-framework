@@ -1,13 +1,18 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
-namespace XMLserialization.Models
+namespace JSONserialization.Models
 {
     [Serializable]
+    [DataContract]
     public class Company
     {
+        [DataMember]
         public string Name { get; set; }
 
+        [DataMember]
         public double Amount { get; set; }
+
 
         // стандартный конструктор без параметров
         public Company():this("", 0) { }
